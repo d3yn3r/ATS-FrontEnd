@@ -1,0 +1,31 @@
+<ngx-spinner template='
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+    <img src="../../../assets/img/spinner.png" style="max-width: 50px; height: auto; alt="Spinner">
+    <h2 style="color: white; padding: 10px;">Cargando...</h2>
+  </div>'
+>
+</ngx-spinner>
+<div class="main-container">
+  <div *ngIf="rol === 'Lider-ANBU'">
+    <h2>Asignación de misiones</h2>
+    <app-misiones-solicitadas></app-misiones-solicitadas>
+    <br>
+    <h2>Historial de misiones</h2>
+    <app-misiones-creadas></app-misiones-creadas>
+  </div>
+
+  <div *ngIf="rol === 'Lider-Aldea'">
+    <h2>Historial de misiones</h2>
+    <app-misiones-creadas></app-misiones-creadas>
+  </div>
+  
+  <div *ngIf="rol === 'Agente'">
+    <h2>Misiones Solicitadas</h2>
+    <app-misiones-solicitadas></app-misiones-solicitadas>
+    <br>
+    <h2>Misiones Aceptadas</h2>
+    <app-misiones-aceptadas></app-misiones-aceptadas>
+  </div>
+    
+    
+</div>

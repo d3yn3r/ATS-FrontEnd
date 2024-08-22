@@ -1,0 +1,45 @@
+/* Estilos globales */
+html, body, app-root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    overflow: hidden; /* Evita el desplazamiento en el cuerpo */
+}
+
+/* Estilos del contenedor principal */
+.body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: calc(100% - 5rem);
+    height: 100%; /* Asegura que el contenedor ocupe el 100% de la altura */
+    margin-left: 5rem;
+    transition: all .5s ease;
+    background: linear-gradient(to right, #bdb2b2, #35363a);
+    padding: 1rem;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    /* Oculta barras de desplazamiento en WebKit */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.body::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en WebKit */
+}
+
+.body-trimmed {
+    width: calc(100% - 16.5625rem);
+    margin-left: 16.5625rem;
+}
+
+.body-md-screen {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+}
+

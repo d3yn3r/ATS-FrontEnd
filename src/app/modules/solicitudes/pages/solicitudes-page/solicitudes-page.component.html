@@ -1,0 +1,34 @@
+<table matSort mat-table [dataSource]="usuariosList">
+    <ng-container matColumnDef="pk_IdUser">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{element.pk_IdUser}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sNombre">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let element">{{element.sNombre}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sEmail">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Correo</th>
+        <td mat-cell *matCellDef="let element">{{element.sEmail}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sEscuadron">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Escuadron</th>
+        <td mat-cell *matCellDef="let element">{{element.sEscuadron}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="bActivo">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Estado</th>
+        <td mat-cell *matCellDef="let element">{{element.bActivo}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="fk_IdRol">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Rol</th>
+        <td mat-cell *matCellDef="let element">{{element.fk_IdRol}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsTable"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsTable;"></tr>
+</table>

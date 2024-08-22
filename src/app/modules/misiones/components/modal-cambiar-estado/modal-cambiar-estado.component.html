@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="left">
+        <h1>Historial de cambios de estado</h1>
+        <mat-dialog-content>
+            <div>
+                <mat-card class="estado">
+                    <p>Titulo del estado</p>
+                    <p>fecha</p>
+                    <p>comentario</p>
+                </mat-card>
+            </div>
+        </mat-dialog-content>
+        
+    </div>
+
+    <div class="right">
+        <mat-card class="form">
+            <mat-card-title>Cambiar estado</mat-card-title>
+            <mat-card-content>
+                <mat-form-field color="accent" class="mat-100">
+                    <mat-label>Estado</mat-label>
+                    <mat-select>
+
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field color="accent" class="mat-100">
+                    <mat-label>Comentario</mat-label>
+                    <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                        cdkAutosizeMinRows="7" cdkAutosizeMaxRows="7"
+                        placeholder="Realice un comentario sobre el cambio de estado"
+                        formControlName="sDecripcion"></textarea>
+                </mat-form-field>
+            </mat-card-content>
+            <div class="btn-enviar">
+                <button>Cambiar estado</button>
+            </div>
+        </mat-card>
+
+        
+    </div>
+</div>

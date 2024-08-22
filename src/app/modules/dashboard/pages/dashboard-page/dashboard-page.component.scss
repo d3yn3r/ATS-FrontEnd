@@ -1,0 +1,103 @@
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%; /* Asegura que el componente ocupe toda la altura disponible */
+    overflow: hidden; /* Evita que los componentes hijos generen barras de desplazamiento */
+    margin-bottom: 2rem;
+}
+
+
+.top-section {
+    @media only screen and (max-width: 1600px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 1500px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 100%;
+    }
+
+    
+  }
+  .middle-section {
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 1600px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 1500px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 100%;
+    }
+    .widget {
+      height: 200px;
+      background-color: #e2a3a3;
+      border-radius: 5px;
+      margin: 10px;
+      &.left {
+        width: 60%;
+        @media only screen and (max-width: 1600px) {
+          width: 60%;
+        }
+        @media only screen and (max-width: 1500px) {
+          width: 60%;
+        }
+        @media only screen and (max-width: 1400px) {
+          width: 60%;
+        }
+        @media only screen and (max-width: 1200px) {
+          width: 60%;
+        }
+      }
+      &.right {
+        width: 40%;
+      }
+    }
+  }
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    .widget {
+      height: 200px;
+      background-color: #e2a3a3;;
+      border-radius: 5px;
+      margin: 10px;
+      &.left {
+        width: 50%;
+        @media only screen and (max-width: 1200px) {
+          width: 50%;
+        }
+      }
+      &.right {
+        width: 50%;
+        @media only screen and (max-width: 1600px) {
+          width: 50%;
+        }
+        @media only screen and (max-width: 1500px) {
+          width: 50%;
+        }
+        @media only screen and (max-width: 1400px) {
+          width: 50%;
+        }
+        @media only screen and (max-width: 1200px) {
+          width: 50%;
+        }
+      }
+    }
+  }

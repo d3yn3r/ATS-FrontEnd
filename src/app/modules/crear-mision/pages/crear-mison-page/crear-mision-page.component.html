@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Crear una nueva misión</h1>
+    <form action="" [formGroup]="misionForm" onsubmit="">
+        <mat-card>
+            <mat-card-content>
+                <form action="">
+                    <mat-form-field color="accent" class="mat-100">
+                        <mat-label>Nombre de la Misión</mat-label>
+                        <input matInput type="text" formControlName="sNombre">
+                    </mat-form-field>
+
+                    <mat-form-field color="accent" class="mat-50">
+                        <mat-label>Fecha estimada de terminación</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="sFechaTerminacion">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker color="accent"></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field color="accent" class="mat-50">
+                        <mat-label>Pago</mat-label>
+                        <input matInput type="number" formControlName="nPago">
+                    </mat-form-field>
+
+                    <mat-form-field color="accent" class="mat-100">
+                        <mat-label>Descripción</mat-label>
+                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5"
+                            cdkAutosizeMaxRows="5"
+                            placeholder="Realice una descripción del objetivo de la misión y las condiciones para aceptarla como completada"
+                            formControlName="sDecripcion"></textarea>
+                    </mat-form-field>
+                </form>
+
+            </mat-card-content>
+            <div class="btn-enviar">
+                <button>Enviar</button>
+            </div>
+
+        </mat-card>
+
+    </form>
+</div>

@@ -1,0 +1,12 @@
+<div class="body" [ngClass]="getBodyClass()">
+  <ngx-spinner template='
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+      <img src="../../../assets/img/spinner.png" style="max-width: 50px; height: auto;" alt="Spinner">
+      <h2 style="color: white; padding: 10px;">Cargando...</h2>
+    </div>'>
+  </ngx-spinner>
+  <div class="body-inner">
+    <router-outlet></router-outlet>
+  </div>
+  
+</div>

@@ -1,0 +1,43 @@
+<div class="main-container">
+
+    <mat-dialog-content class="scrollable-content">
+        <div class="header">
+            <div class="header-item">
+                <div class="header-label">Fecha de Solicitud:</div>
+                <p class="header-value">{{inputdata.SFechaSolicitud}}</p>
+            </div>
+            <div class="header-item">
+                <div class="header-label">Fecha Estimada de Finalización de la Misión:</div>
+                <p class="header-value">{{inputdata.SFechaFin}}</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-item">
+                <div class="content-label">Nombre de la Misión: </div>
+                <p class="content-value">{{inputdata.SNombreMision}}</p>
+            </div>
+            <div class="content-item">
+                <div class="content-label">Descripción: </div>
+                <p class="content-value">{{inputdata.SDescripcion}}</p>
+            </div>
+            <div class="content-item">
+                <div class="content-label">Pago: </div>
+                <p class="content-value">{{inputdata.NPago}}</p>
+            </div>
+            <div *ngIf="componente !== 'misiones-solicitadas'" class="content-item">
+                <div class="content-label">Agente:</div>
+                <p class="content-value">{{inputdata.SNombreUsuarioResponsable}}</p>
+            </div>
+        </div>
+    </mat-dialog-content>
+    <br>
+    <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Agente'">
+        <button class="btn btn-primary">Aceptar</button>
+        <button class="btn btn-secondary">Rechazar</button>
+    </div>
+    <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Lider-ANBU'">
+        <button class="btn btn-primary">Asignar Agente</button>
+        <button class="btn btn-secondary">Rechazar</button>
+    </div>
+</div>

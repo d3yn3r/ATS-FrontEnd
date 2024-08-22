@@ -1,0 +1,53 @@
+[
+    {
+        "PK_Id_Usuario": 1,
+        "SNombre": "Kakashi",
+        "SApellido": "Hatake",
+        "SEmail":"kaha@correo.com",
+        "STelefono": "300566444",
+        "BActivo": 1,
+        "SEscuadron":"Muerte",
+        "NSaldo":1000,
+        "BFotoPerfil":"",
+        "NIntentosLogin":0,
+        "DFechaCreacion":"12-12-23",
+        "FK_Id_Rol":1,
+        "SHashedPassword":"12345678",
+        "token": "token12345678",
+        "rol": "Lider-ANBU"
+    },
+    {
+        "PK_Id_Usuario": 2,
+        "SNombre": "Yamato",
+        "SApellido": "Terumī",
+        "SEmail":"Yamato@correo.com",
+        "STelefono": "3002221111",
+        "BActivo": 1,
+        "SEscuadron":"Muerte",
+        "NSaldo":500,
+        "BFotoPerfil":"",
+        "NIntentosLogin":0,
+        "DFechaCreacion":"14-12-23",
+        "FK_Id_Rol":2,
+        "SHashedPassword":"12345678",
+        "token": "token12345678",
+        "rol": "Agente"
+    },
+    {
+        "PK_Id_Usuario": 3,
+        "SNombre": "Ōnoki",
+        "SApellido": "Deidara",
+        "SEmail":"onodei@correo.com",
+        "STelefono": "3002221111",
+        "BActivo": 1,
+        "SEscuadron":"Muerte",
+        "NSaldo":500,
+        "BFotoPerfil":"",
+        "NIntentosLogin":0,
+        "DFechaCreacion":"14-12-23",
+        "FK_Id_Rol":2,
+        "SHashedPassword":"12345678",
+        "token": "token12345678",
+        "rol": "Lider-Aldea"
+    }
+]
