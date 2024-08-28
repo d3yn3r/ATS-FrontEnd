@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginPageComponent } from './modules/auth/pages/login-page/login-page.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { RegisterPageComponent } from './modules/auth/pages/register-page/register.component';
-import { ConfiguracionesPageComponent } from './modules/configuraciones/pages/configuraciones-page/configuraciones-page.component';
 import { ForgotPasswordPageComponent } from './modules/auth/pages/forgot-password-page/forgot-password.component';
 import { authGuard } from './core/guards/auth.guard';
 import { DashboardPageComponent } from './modules/dashboard/pages/dashboard-page/dashboard-page.component';
@@ -14,6 +13,7 @@ import { ReportesPageComponent } from './modules/reportes/pages/reporte-page/rep
 import { SolicitudesPageComponent } from './modules/solicitudes/pages/solicitudes-page/solicitudes-page.component';
 import { RolGuard } from './core/guards/rol.guard';
 import { PageNotAuthorizedComponent } from './shared/page-not-authorized/page-not-authorized.component';
+import { PerfilPageComponent } from './modules/perfil/pages/perfil-page/perfil-page.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -34,7 +34,7 @@ const routes: Routes = [
     path:'dashboard',
     component:DashboardPageComponent,
     canActivate:[authGuard, RolGuard],
-    data:{expectedRoles:['Lider-ANBU','Lider-Aldea','Agente']}
+    data:{expectedRoles:['Lider-ANBU','Agente']}
   },
   { 
     path:'crear-mision',
@@ -67,10 +67,10 @@ const routes: Routes = [
     data:{expectedRoles:['Lider-ANBU']}
   },
   { 
-    path:'configuraciones',
-    component:ConfiguracionesPageComponent,
+    path:'perfil',
+    component:PerfilPageComponent,
     canActivate:[authGuard, RolGuard],
-    data:{expectedRoles:['Lider-ANBU']}
+    data:{expectedRoles:['Lider-ANBU','Lider-Aldea','Agente']}
   },
   //ruta para cuando no se está autorizado para acceder al recurso solicitado
   {

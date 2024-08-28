@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ReportesPageComponent {
 
+  rol: string | null;
+
+  constructor()
+  {
+    this.rol = localStorage.getItem('rol')
+  }
+
 }

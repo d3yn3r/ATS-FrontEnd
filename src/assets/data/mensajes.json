@@ -1,0 +1,63 @@
+[
+    {
+      "PK_Id_Mensaje": 1,
+      "FK_Id_UsuarioEnvia": 1001,
+      "SNombreUsuarioEnvia": "Kakashi Hatake",
+      "FK_Id_UsuarioRecibe": 2,
+      "SNombreUsuarioRecibe": "Yamato",
+      "SDescripcion": "Se ha detectado una firma de chakra hostil en las cercanías del bosque a lo largo del perímetro norte. Los sensores de chakra han identificado fluctuaciones inusuales que indican una posible presencia de enemigos o una amenaza potencial. El chakra detectado parece ser de un nivel alto y está causando perturbaciones en el entorno. Es imperativo que se realice una investigación exhaustiva para evaluar la magnitud del peligro y determinar las acciones a seguir. Solicito apoyo inmediato para desplegar un equipo de reconocimiento y neutralización si es necesario. Asegúrate de mantener la máxima discreción y de reportar cualquier hallazgo inmediatamente. Coordina con los demás equipos ANBU en la región para una cobertura completa.",
+      "SSeveridad": "Alta",
+      "NNumeroRefuerzos": 0,
+      "SFechaMensaje": "2024-08-25",
+      "STipoMensaje":"Auxilio"
+    },
+    {
+      "PK_Id_Mensaje": 2,
+      "FK_Id_UsuarioEnvia": 1003,
+      "SNombreUsuarioEnvia": "Itachi Uchiha",
+      "FK_Id_UsuarioRecibe": 2,
+      "SNombreUsuarioRecibe": "Shisui Uchiha",
+      "SDescripcion": "El objetivo ha sido identificado en la aldea vecina. Procediendo con las órdenes.",
+      "SSeveridad": "Media",
+      "NNumeroRefuerzos": 0,
+      "SFechaMensaje": "2024-08-26",
+      "STipoMensaje":"Ordinario"
+    },
+    {
+      "PK_Id_Mensaje": 3,
+      "FK_Id_UsuarioEnvia": 1005,
+      "SNombreUsuarioEnvia": "Tenzo",
+      "FK_Id_UsuarioRecibe": 2,
+      "SNombreUsuarioRecibe": "Sai",
+      "SDescripcion": "Exploración completada. No se encontraron amenazas en las inmediaciones.",
+      "SSeveridad": "Baja",
+      "NNumeroRefuerzos": 0,
+      "SFechaMensaje": "2024-08-27",
+      "STipoMensaje":"Ordinario"
+    },
+    {
+      "PK_Id_Mensaje": 4,
+      "FK_Id_UsuarioEnvia": 1007,
+      "SNombreUsuarioEnvia": "Danzo Shimura",
+      "FK_Id_UsuarioRecibe": 1,
+      "SNombreUsuarioRecibe": "Root ANBU Member",
+      "SDescripcion": "Operación de alto riesgo programada para mañana. Se requiere la máxima discreción.",
+      "SSeveridad": "Alta",
+      "NNumeroRefuerzos": 5,
+      "SFechaMensaje": "2024-08-28",
+      "STipoMensaje":"Refuerzos"
+    },
+    {
+      "PK_Id_Mensaje": 5,
+      "FK_Id_UsuarioEnvia": 1009,
+      "SNombreUsuarioEnvia": "Hiruzen Sarutobi",
+      "FK_Id_UsuarioRecibe": 1,
+      "SNombreUsuarioRecibe": "Koharu Utatane",
+      "SDescripcion": "Revisión de informes completada. La situación está bajo control.",
+      "SSeveridad": "Media",
+      "NNumeroRefuerzos": 0,
+      "SFechaMensaje": "2024-08-29",
+      "STipoMensaje":"Ordinario"
+    }
+  ]
+  

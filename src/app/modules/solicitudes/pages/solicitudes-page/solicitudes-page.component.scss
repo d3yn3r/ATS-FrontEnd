@@ -6,3 +6,8 @@
     overflow: hidden; /* Evita que los componentes hijos generen barras de desplazamiento */
     margin-bottom: 2rem;
 }
+
+.table-row:hover {
+    background-color: #edeaea3c;
+    cursor: pointer;
+}

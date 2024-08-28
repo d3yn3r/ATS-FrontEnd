@@ -1,0 +1,20 @@
+<br>
+<table matSort mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="Mensaje">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Mensaje</th>
+        <td mat-cell *matCellDef="let element">{{element.PK_Id_Mensaje + " - "+ element.STipoMensaje + " - " + element.SNombreUsuarioEnvia+ " - Severidad: "+ element.SSeveridad}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsTable"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsTable;" (click)="seleccionarMensaje(row)"
+    [ngClass]="{'table-row': true}"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5,10,15]"
+              aria-label="Página"
+              color="accent" showFirstLastButtons>
+</mat-paginator>
+<br>
+<div class="btn">
+    <button (click)="crearMensaje()">Crear Mensaje</button>
+</div>

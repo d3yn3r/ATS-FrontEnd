@@ -6,3 +6,18 @@
     overflow: hidden; /* Evita que los componentes hijos generen barras de desplazamiento */
     margin-bottom: 2rem;
 }
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+}

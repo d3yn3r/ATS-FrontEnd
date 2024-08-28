@@ -19,7 +19,10 @@ import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { SolicitudesPageComponent } from './pages/solicitudes-page/solicitudes-page.component';
-import { RevisarSolicitudComponent } from './components/revisar-solicitud/revisar-solicitud.component';
+import { ModalRevisarSolicitudComponent } from './components/revisar-solicitud/modal-revisar-solicitud.component';
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
+import { CustomMatPaginatorIntl } from 'src/app/shared/mat-paginator/mat-paginator';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
@@ -28,7 +31,7 @@ import { RevisarSolicitudComponent } from './components/revisar-solicitud/revisa
 @NgModule({
   declarations: [
     SolicitudesPageComponent,
-    RevisarSolicitudComponent
+    ModalRevisarSolicitudComponent
   ],
   imports: [
     BrowserModule,
@@ -48,10 +51,12 @@ import { RevisarSolicitudComponent } from './components/revisar-solicitud/revisa
     MatTooltipModule,
     MatNativeDateModule, 
     MatDatepickerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
+    MatTabsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: []
+  providers: [{ provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl }]
 })
 export class SolicitudesModule {
   constructor(
@@ -69,5 +74,5 @@ export class SolicitudesModule {
     this._matIconRegistry.addSvgIcon('pinza-para-boligrafo', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/pinza-para-boligrafo.svg'));
     this._matIconRegistry.addSvgIcon('circulo-marca-x', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/circulo-marca-x.svg'));
     
-}
+  }
  }

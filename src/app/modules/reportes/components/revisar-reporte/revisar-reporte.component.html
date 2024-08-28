@@ -1,0 +1,46 @@
+<mat-tab-group color="accent">
+    <mat-tab label="Detalles Reporte">
+        <div class="main-container">
+            <mat-dialog-content class="scrollable-content">
+                <div class="header">
+                    <div class="header-item">
+                        <div class="header-label">Fecha Reporte:</div>
+                        <p class="header-value">{{inputdata.SFechaReporte}}</p>
+                    </div>
+                    <div class="header-item">
+                        <div class="header-label">Estado:</div>
+                        <p class="header-value">{{inputdata.SNombreEstado}}</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="content-item">
+                        <div class="content-label">Usuario Reporta: </div>
+                        <p class="content-value">{{inputdata.SNombreUsuarioReporta}}</p>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">Usuario Reportado: </div>
+                        <p class="content-value">{{inputdata.SNombreUsuarioReportado}}</p>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">Motivo: </div>
+                        <p class="content-value">{{inputdata.SMotivo}}</p>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">Descripción: </div>
+                        <p class="content-value">{{inputdata.SDescripcion}}</p>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">Evidencia:</div>
+                        <p class="content-value">{{inputdata.SEvidencia}}</p>
+                    </div>
+                </div>
+            </mat-dialog-content>
+            <br>
+            <div class="buttons" *ngIf="rol === 'Lider-ANBU'">
+                <button class="btn btn-primary">Aceptar</button>
+                <button class="btn btn-secondary">Archivar reporte</button>
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>

@@ -19,12 +19,22 @@ import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { MensajesPageComponent } from './pages/mensajes-page/mensajes-page.component';
+import { DetallesMensajeComponent } from './components/detalles-mensaje/detalles-mensaje.component';
+import { ListaMensajesComponent } from './components/lista-mensajes/lista-mensajes.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { CrearMensajeComponent } from './components/crear-mensaje/crear-mensaje.component';
+import { MatTab, MatTabsModule } from '@angular/material/tabs';
+
+
 
 
 
 @NgModule({
   declarations: [
-    MensajesPageComponent
+    MensajesPageComponent,
+    DetallesMensajeComponent,
+    ListaMensajesComponent,
+    CrearMensajeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,9 @@ import { MensajesPageComponent } from './pages/mensajes-page/mensajes-page.compo
     MatTooltipModule,
     MatNativeDateModule, 
     MatDatepickerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
+    MatTabsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: []

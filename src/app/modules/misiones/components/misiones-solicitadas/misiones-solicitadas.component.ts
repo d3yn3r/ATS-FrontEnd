@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subject, takeUntil } from 'rxjs';
@@ -15,7 +15,7 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 
 
-export class MisionesSolicitadasComponent {
+export class MisionesSolicitadasComponent implements OnInit,OnDestroy {
   private unsubscribe$ = new Subject<void>();
   columnsTable = ['PK_IdMision','SEstadoMision','SNombreMision','SNombreAldea','SFechaSolicitud','NPago']
   misiones!: GetMisionInterface[];
@@ -64,8 +64,8 @@ export class MisionesSolicitadasComponent {
 
   AbrirModalRevisarMision(mision: GetMisionInterface){
     this.dialog.open(ModalRevisarMisionComponent,{
-      width:'60%',
-      height:'95%',
+      width:'70%',
+      height:'90%',
       enterAnimationDuration:'500ms',
       exitAnimationDuration:'500ms',
       autoFocus: false,

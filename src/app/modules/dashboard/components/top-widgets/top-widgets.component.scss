@@ -1,68 +1,105 @@
 .widget-container {
-    display: flex;
-    justify-content: space-between;
-    .widget {
-      width: 285px;
-      height: 100px;
-      color: #fff;
-      border-radius: 5px;
-      margin: 10px;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      
-      &.green {
-        background-color: rgb(4, 67, 66);
-      }
-      &.yellow {
-        background-color: rgb(237, 158, 32);
-      }
-      &.red {
-        background-color: rgb(126, 5, 5);
-      }
-      &.blue {
-        background-color: rgb(105, 32, 251);
-      }
-      &.money {
-        background-color: rgb(9, 165, 9);
-      }
-      @media only screen and (max-width: 1600px) {
-        width: 260px;
-      }
-      @media only screen and (max-width: 1500px) {
-        width: 235px;
-      }
-      @media only screen and (max-width: 1400px) {
-        width: 225px;
-      }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 10px; 
+  @media only screen and (max-width: 768px) {
+    justify-content: center; 
+  }
+}
+
+.widget {
+  width: 325px;
+  height: 175px;
+  background-color: #fff;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; /* Incluye el padding y border en el width y height */
+
+  &.green {
+    background-color: rgb(4, 67, 66);
+  }
+  &.yellow {
+    background-color: rgb(237, 158, 32);
+  }
+  &.red {
+    background-color: rgb(126, 5, 5);
+  }
+  &.blue {
+    background-color: rgb(105, 32, 251);
+  }
+
+  &.money{
+    background-color: rgb(22, 144, 49);
+  }
+
+  @media only screen and (max-width: 1600px) {
+    width: 225px;
+  }
+  @media only screen and (max-width: 1500px) {
+    width: 200px;
+  }
+  @media only screen and (max-width: 1400px) {
+    width: 180px;
+  }
+  @media only screen and (max-width: 1200px) {
+    width: 150px;
+  }
+  @media only screen and (max-width: 992px) {
+    width: 130px;
+    height: 150px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 150px;
+    height: 125px;
+    margin: 5px; /* Reduce el margen para pantallas pequeñas */
+    padding: 15px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  .icon {
+    width: 100px;
+    font-size: 60px;
+    text-align: center;
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 45px;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 70px;
+      font-size: 35px;
+    }
+  }
+
+  .value {
+    text-align: center;
+    width: 175px;
+
+    .top {
+      font-size: 30px;
+
       @media only screen and (max-width: 1200px) {
-        width: 185px;
+        font-size: 26px;
       }
-  
-      .icon {
-        width: 100px;
-        font-size: 60px;
-        text-align: center;
-        @media only screen and (max-width: 1200px) {
-          font-size: 45px;
-        }
+      @media only screen and (max-width: 768px) {
+        font-size: 20px;
       }
-      .value {
-        text-align: center;
-        width: 175px;
-        .top {
-          font-size: 30px;
-          @media only screen and (max-width: 1200px) {
-            font-size: 26px;
-          }
-        }
-        .bottom {
-          font-size: 20px;
-          margin-top: 10px;
-          @media only screen and (max-width: 1200px) {
-            font-size: 16px;
-          }
-        }
+    }
+
+    .bottom {
+      font-size: 20px;
+      margin-top: 10px;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 16px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 14px;
+        margin-top: 5px;
       }
     }
   }
+}

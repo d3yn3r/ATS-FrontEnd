@@ -1,9 +1,9 @@
-<mat-tab-group color="accent">
-    <mat-tab label = "Detalles Misión">
+<mat-tab-group color="accent" class="scrollable-content" >
+    <mat-tab label = "Detalles Misión" class="scrollable-content">
         <app-detalle-mision></app-detalle-mision>
     </mat-tab>
 
-    <mat-tab label = "Trazabilidad Misión">
+    <mat-tab *ngIf="componente !== 'misiones-solicitadas' && rol !=='Lider-Aldea'" label = "Trazabilidad Misión" class="scrollable-content">
         <app-trazabilidad-mision></app-trazabilidad-mision>
     </mat-tab>
 </mat-tab-group>

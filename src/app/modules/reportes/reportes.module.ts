@@ -19,13 +19,22 @@ import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { ReportesPageComponent } from './pages/reporte-page/reportes-page.component';
+import { CrearReporteComponent } from './components/crear-reporte/crear-reporte.component';
+import { RevisarReporteComponent } from './components/revisar-reporte/revisar-reporte.component';
+import { VerReporteLiderComponent } from './components/ver-reporte-lider/ver-reporte-lider.component';
+import { VerReporteAgenteComponent } from './components/ver-reporte-agente/ver-reporte-agente.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
 
 @NgModule({
   declarations: [
-    ReportesPageComponent
+    ReportesPageComponent,
+    CrearReporteComponent,
+    RevisarReporteComponent,
+    VerReporteLiderComponent,
+    VerReporteAgenteComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +54,8 @@ import { ReportesPageComponent } from './pages/reporte-page/reportes-page.compon
     MatTooltipModule,
     MatNativeDateModule, 
     MatDatepickerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: []

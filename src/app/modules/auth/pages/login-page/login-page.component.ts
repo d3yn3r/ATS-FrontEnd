@@ -16,6 +16,7 @@ export class LoginPageComponent implements OnInit {
   private unsubscribe$ = new Subject<void>();
   loginForm: FormGroup;
   loading: boolean = false;
+  loginFallido:boolean = false;
 
   constructor(
     private builder: FormBuilder,
@@ -31,7 +32,10 @@ export class LoginPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    localStorage.removeItem('PK_Id_Usuario')
+    localStorage.removeItem('rol')
+    localStorage.removeItem('nombre')
+    localStorage.removeItem('token')
   }
 
   ngOnDestroy(): void {
@@ -53,13 +57,14 @@ export class LoginPageComponent implements OnInit {
         takeUntil(this.unsubscribe$)
       ).subscribe({
         next:(res) =>{
-          localStorage.setItem('token', res[0].token);
-          localStorage.setItem('rol', res[0].rol);
-          localStorage.setItem('PK_Id_Usuario', res[0].PK_Id_Usuario.toString())
+          localStorage.setItem('token', res.token);
+          localStorage.setItem('rol', res.rol);
+          localStorage.setItem('PK_Id_Usuario', res.PK_Id_Usuario.toString())
+          this.authService.setNombre(res.SNombre)
           this.router.navigate(['/misiones']);
         },
-        error:(error) =>{
-          alert('inicio de sesión fallido')
+        error:(err) =>{
+          this.loginFallido = true;
           this.loading = false;
           this.spinner.hide();
         },
@@ -70,6 +75,14 @@ export class LoginPageComponent implements OnInit {
       });
         
     }
+  }
+
+  onForgotPassword(){
+    this.router.navigate(['/forgotpassword'])
+  }
+
+  onRegister(){
+    this.router.navigate(['/register'])
   }
 
 }

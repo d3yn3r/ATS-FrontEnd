@@ -10,6 +10,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -18,10 +20,11 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { MatTableModule } from '@angular/material/table';
-import { SideNavComponent } from './side-nav/side-nav.component';
+import { SideNavComponent } from './side-nav/pages/side-nav.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PageNotAuthorizedComponent } from './page-not-authorized/page-not-authorized.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NotificacionesItemComponent } from './side-nav/components/notificaciones-item/notificaciones-item.component';
 
 
 
@@ -32,7 +35,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SideNavComponent,
     LayoutComponent,
     PageNotAuthorizedComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NotificacionesItemComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatTooltipModule,
     MatNativeDateModule, 
     MatDatepickerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule, 
+    MatMenuModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
@@ -78,6 +84,7 @@ export class SharedModule {
     this._matIconRegistry.addSvgIcon('monitor-de-tablero', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/monitor-de-tablero.svg'));
     this._matIconRegistry.addSvgIcon('pinza-para-boligrafo', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/pinza-para-boligrafo.svg'));
     this._matIconRegistry.addSvgIcon('circulo-marca-x', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/circulo-marca-x.svg'));
-    
+    this._matIconRegistry.addSvgIcon('bell', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/bell.svg'));
+    this._matIconRegistry.addSvgIcon('bell-notification', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/bell-notification-social-media.svg'));
+  }
 }
- }

@@ -67,8 +67,8 @@ export class MisionesCreadasComponent implements OnInit, OnDestroy {
 
   AbrirModalRevisarMision(mision: GetMisionInterface){
     this.dialog.open(ModalRevisarMisionComponent,{
-      width:'60%',
-      height:'95%',
+      width:'70%',
+      height:'90%',
       enterAnimationDuration:'500ms',
       exitAnimationDuration:'500ms',
       autoFocus: false,

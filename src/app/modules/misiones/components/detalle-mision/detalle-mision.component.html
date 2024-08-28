@@ -1,5 +1,4 @@
 <div class="main-container">
-
     <mat-dialog-content class="scrollable-content">
         <div class="header">
             <div class="header-item">
@@ -30,14 +29,35 @@
                 <p class="content-value">{{inputdata.SNombreUsuarioResponsable}}</p>
             </div>
         </div>
+        <div class="footer">
+
+            <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Agente'">
+                <button class="btn btn-primary">Aceptar</button>
+                <button class="btn btn-secondary">Rechazar</button>
+            </div>
+            <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Lider-ANBU'">
+                <button class="btn btn-primary">Asignar Agente</button>
+                <button class="btn btn-secondary">Rechazar</button>
+            </div>
+            <div class="buttons"
+                *ngIf="inputdata.SEstadoMision !== 'En Asignación' && inputdata.SEstadoMision !== 'Completada' && rolUsuario === 'Lider-ANBU'">
+                <button class="btn btn-primary">Cancelar Misión</button>
+            </div>
+            <div class="form">
+                <form action="">
+                    <mat-form-field fxFlex="20%" color="accent">
+                        <mat-label>Seleccionar Agente</mat-label>
+                        <mat-select>
+                            <mat-option value="Yamato">Yamato</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </div>
+
+
+        </div>
+
     </mat-dialog-content>
     <br>
-    <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Agente'">
-        <button class="btn btn-primary">Aceptar</button>
-        <button class="btn btn-secondary">Rechazar</button>
-    </div>
-    <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Lider-ANBU'">
-        <button class="btn btn-primary">Asignar Agente</button>
-        <button class="btn btn-secondary">Rechazar</button>
-    </div>
+
 </div>

@@ -20,20 +20,19 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { MatTableModule } from '@angular/material/table';
 
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
-import { BarchartInvestedComponent } from './components/barchart-invested/barchart-invested.component';
+
 import { BarchartMissionsComponent } from './components/barchart-missions/barchart-missions.component';
-import { BarchartProfitsComponent } from './components/barchart-profits/barchart-profits.component';
+
 import { PiechartComponent } from './components/piechart/piechart.component';
 import { TopWidgetsComponent } from './components/top-widgets/top-widgets.component';
+import { ChartModule } from 'angular-highcharts';
 
 
 
 
 @NgModule({
   declarations: [
-    BarchartInvestedComponent,
     BarchartMissionsComponent,
-    BarchartProfitsComponent,
     PiechartComponent,
     TopWidgetsComponent,
     DashboardPageComponent,
@@ -57,15 +56,14 @@ import { TopWidgetsComponent } from './components/top-widgets/top-widgets.compon
     MatTooltipModule,
     MatNativeDateModule, 
     MatDatepickerModule,
-    MatDialogModule
+    MatDialogModule,
+    ChartModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   exports: [
     DashboardPageComponent,
-    BarchartInvestedComponent,
     BarchartMissionsComponent,
-    BarchartProfitsComponent,
     PiechartComponent,
     TopWidgetsComponent
   ]
@@ -75,16 +73,11 @@ export class DashboardModule {
     private _domSanitizer: DomSanitizer,
     private _matIconRegistry: MatIconRegistry
 ) {
-    this._matIconRegistry.addSvgIcon('agregar-usuario', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/agregar-usuario.svg'));
-    this._matIconRegistry.addSvgIcon('archivo-medico-alt', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/archivo-medico-alt.svg'));
-    this._matIconRegistry.addSvgIcon('bandera', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/bandera.svg'));
-    this._matIconRegistry.addSvgIcon('chimenea-de-la-casa', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/chimenea-de-la-casa.svg'));
-    this._matIconRegistry.addSvgIcon('el', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/el.svg'));
-    this._matIconRegistry.addSvgIcon('energia', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/energia.svg'));
-    this._matIconRegistry.addSvgIcon('mensajes', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/mensajes.svg'));
-    this._matIconRegistry.addSvgIcon('monitor-de-tablero', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/monitor-de-tablero.svg'));
-    this._matIconRegistry.addSvgIcon('pinza-para-boligrafo', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/pinza-para-boligrafo.svg'));
-    this._matIconRegistry.addSvgIcon('circulo-marca-x', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/circulo-marca-x.svg'));
+    this._matIconRegistry.addSvgIcon('usuarios-alt', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/usuarios-alt.svg'));
+    this._matIconRegistry.addSvgIcon('comprobacion-del-portapapeles', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/comprobacion-del-portapapeles.svg'));
+    this._matIconRegistry.addSvgIcon('dolar-de-saco', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/dolar-de-saco.svg'));
+    this._matIconRegistry.addSvgIcon('hourglass-end', this._domSanitizer.bypassSecurityTrustResourceUrl('../assets/icons/hourglass-end.svg'));
+    
     
 }
  }

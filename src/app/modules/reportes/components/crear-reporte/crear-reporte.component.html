@@ -1,0 +1,38 @@
+<mat-tab-group color="accent">
+    <mat-tab label="Crear Reporte">
+        <div class="main-container">
+            <mat-dialog-content class="scrollable-content">
+                <div class="content">
+                    <form action="" [formGroup]="reporteForm">
+                        <mat-form-field color="accent" class="mat-100">
+                            <mat-label>Nombre del agente</mat-label>
+                            <input matInput type="text" formControlName="SNombreAgenteReportado">
+                        </mat-form-field>
+
+                        <mat-form-field color="accent" class="mat-100">
+                            <mat-label>Descripción</mat-label>
+                            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5" class="scrollable-content"
+                                cdkAutosizeMaxRows="5"
+                                placeholder="Realice una descripción del porque está realizando el reporte"
+                                formControlName="SDecripcion"></textarea>
+                        </mat-form-field>
+
+                        <mat-form-field color="accent" class="mat-100">
+                            <mat-label>Motivo del reporte</mat-label>
+                            <input matInput type="text" formControlName="SMotivo" placeholder="indique los motivos por los cual realiza el reporte">
+                        </mat-form-field>
+
+                        <mat-form-field color="accent" class="mat-100">
+                            <mat-label>Evidencia</mat-label>
+                            <input matInput type="text" formControlName="SEvidencia" placeholder="Coloque aca los enlaces donde se encuentra la evidencia">
+                        </mat-form-field>
+                    </form>
+                </div>
+            </mat-dialog-content>
+            <br>
+            <div class="buttons">
+                <button class="btn btn-primary">Crear Reporte</button>
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>

@@ -1,1 +1,52 @@
-<p>register works!</p>
+<ngx-spinner template='
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+    <img src="../../../assets/img/spinner.png" style="max-width: 50px; height: auto;" alt="Spinner">
+    <h2 style="color: white; padding: 10px;">Cargando...</h2>
+  </div>'></ngx-spinner>
+
+<div class="parent">
+    <div class="container">
+
+        <form [formGroup]="registerForm">
+            <h1>Registrate</h1>
+            <mat-form-field color="accent" appearance="fill" class="mat-50">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" formControlName="SNombre">
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="fill" class="mat-50">
+                <mat-label>Apellido</mat-label>
+                <input matInput type="text" formControlName="SApellido">
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="fill" class="mat-50">
+                <mat-label>Correo electrónico</mat-label>
+                <input matInput type="text" formControlName="SEmail">
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="fill" class="mat-50">
+                <mat-label>Telefono</mat-label>
+                <input matInput type="text" formControlName="STelefono">
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="fill" class="mat-50">
+                <mat-label>Escuadrón</mat-label>
+                <input matInput type="text" formControlName="SEscuadron">
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="fill" class="mat-50">
+                <mat-label>Aldea</mat-label>
+                <input matInput type="text" formControlName="SNombreAldea">
+            </mat-form-field>
+        </form>
+
+
+        <div *ngIf="camposObligatorios" class="camposObligatorios">
+            <p>Completa los campos obligarios</p>
+        </div>
+        <div class="btn">
+            <button class="recuperar" mat-raised-button (click)="registrar()" type="submit">
+                <span>Enviar Registro</span>
+            </button>
+            <button class="login" mat-raised-button (click)="regresarLogin()" type="submit">
+                <span>Regresar</span>
+            </button>
+        </div>
+
+    </div>
+</div>

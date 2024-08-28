@@ -1,0 +1,54 @@
+<div class="profile-container">
+    
+    <div class="cont-img">
+        <h2>Perfil de Usuario</h2>
+        <img [src]="tempPhoto" alt="">
+    </div>
+
+    <form [formGroup]="userProfileForm">
+        <mat-form-field color="accent" class="mat-50">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name" [readonly]="!isEditable">
+        </mat-form-field>
+
+        <mat-form-field color="accent" class="mat-50">
+            <mat-label>Aldea</mat-label>
+            <input matInput formControlName="village" [readonly]="!isEditable">
+        </mat-form-field>
+
+        <mat-form-field color="accent" class="mat-50">
+            <mat-label>Correo</mat-label>
+            <input matInput formControlName="email" [readonly]="!isEditable">
+        </mat-form-field>
+
+        <mat-form-field color="accent" class="mat-50">
+            <mat-label>Celular</mat-label>
+            <input matInput formControlName="phone" [readonly]="!isEditable">
+        </mat-form-field>
+
+        <mat-form-field color="accent" class="mat-50">
+            <mat-label>Rol</mat-label>
+            <input matInput formControlName="role" readonly>
+        </mat-form-field>
+
+        <mat-form-field color="accent" class="mat-50">
+            <mat-label>Saldo</mat-label>
+            <input matInput type="number" formControlName="balance" readonly>
+        </mat-form-field>
+    </form>
+    <div class="btn-cont">
+        <div class="buttons">
+            <button class="btn-editar" mat-raised-button *ngIf="!isEditable" (click)="toggleEdit()">Editar</button>
+            
+            <button class="btn-guardar" mat-raised-button *ngIf="isEditable" (click)="saveChanges()">Guardar Cambios</button>
+            <button class="btn-img" *ngIf="isEditable" mat-button (click)="triggerFileInput()">Cambiar foto de perfil</button>
+            <input  *ngIf="isEditable" #fileInput type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+            <button class="btn-cancelar" mat-raised-button *ngIf="isEditable" (click)="cancelChanges()">Cancelar</button>
+            
+        </div>
+    </div>
+    
+</div>
+<br>
+<br>
+<br>

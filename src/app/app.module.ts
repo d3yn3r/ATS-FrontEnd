@@ -18,7 +18,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
-import { SideNavComponent } from './shared/side-nav/side-nav.component';
+import { SideNavComponent } from './shared/side-nav/pages/side-nav.component';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { CrearMisionModule } from './modules/crear-mision/crear-mision.module';
@@ -27,6 +27,7 @@ import { MisionesModule } from './modules/misiones/misiones.module';
 import { MensajesModule } from './modules/mensajes/mensajes.module';
 import { ReportesModule } from './modules/reportes/reportes.module';
 import { SolicitudesModule } from './modules/solicitudes/solicitudes.module';
+import { PerfilModule } from './modules/perfil/perfil.module';
 
 
 
@@ -60,7 +61,8 @@ import { SolicitudesModule } from './modules/solicitudes/solicitudes.module';
     MisionesModule,
     MensajesModule,
     ReportesModule,
-    SolicitudesModule
+    SolicitudesModule,
+    PerfilModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

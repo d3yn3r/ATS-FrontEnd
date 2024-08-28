@@ -1,0 +1,35 @@
+<div class="main-container">
+    <mat-dialog-content class="scrollable-content">
+        <div class="header">
+            <div class="header-item">
+                <div class="header-label">Fecha de Solicitud:</div>
+                <p class="header-value">{{inputdata.DFechaCreacion}}</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-item">
+                <div class="content-label">Nombre: </div>
+                <p class="content-value">{{inputdata.SNombre + " " +inputdata.SApellido}}</p>
+            </div>
+            <div class="content-item">
+                <div class="content-label">Email: </div>
+                <p class="content-value">{{inputdata.SEmail}}</p>
+            </div>
+            <div class="content-item">
+                <div class="content-label">Telefono: </div>
+                <p class="content-value">{{inputdata.STelefono}}</p>
+            </div>
+            <div class="content-item">
+                <div class="content-label">Razón: </div>
+                <p class="content-value">{{inputdata.SRazon}}</p>
+            </div>
+        </div>
+    </mat-dialog-content>
+    <br>
+    <div class="buttons">
+        <button class="btn btn-primary">Aceptar</button>
+        <button class="btn btn-secondary">Rechazar</button>
+    </div>
+    
+</div>

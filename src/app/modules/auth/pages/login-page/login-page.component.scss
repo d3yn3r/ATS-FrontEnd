@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
- 
 
-.parent{
+
+.parent {
     background: linear-gradient(to right, #bdb2b2, #35363a);
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     width: 100%;
 }
 
-.container{
+.container {
     background-color: #999595;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -29,18 +29,18 @@
     min-height: 480px;
 }
 
-.container p{
+.container p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.container span{
+.container span {
     font-size: 12px;
 }
 
-.container a{
+.container a {
     color: #333;
     font-size: 13px;
     text-decoration: none;
@@ -48,11 +48,11 @@
     text-align: center;
 }
 
-.container h1{
+.container h1 {
     text-align: center;
 }
 
-.container button{
+.container button {
     background-color: #2a292c;
     color: #fff;
     font-size: 12px;
@@ -66,14 +66,14 @@
     cursor: pointer;
 }
 
-.form-container{
+.form-container {
     height: 100%;
     width: 50%;
     display: flex;
     justify-content: center;
 }
 
-.container form{
+.container form {
     display: flex;
     flex-direction: column;
     width: 88%;
@@ -83,7 +83,7 @@
 
 
 
-.toggle-container{
+.toggle-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -96,19 +96,106 @@
 }
 
 
-.toggle{
+.toggle {
     background-color: #090909;
     height: 100%;
     background: linear-gradient(to right, #29292a, #1c1c1c);
     color: #fff;
 }
 
-.image{
+.image {
     width: 100%;
     height: 100%;
 }
 
-img{
+img {
     width: 100%;
 }
 
+
+.login-fallido {
+    color: #de0909;
+    text-align: center;
+}
+
+.enlaces {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    a {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .parent{
+        padding: 20px;
+    }
+    
+    .container {
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .toggle {
+        display: flex;
+        border-radius: none;
+    }
+    .toggle-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar la imagen y otros elementos horizontalmente */
+        justify-content: center; /* Centrar la imagen y otros elementos verticalmente */
+        text-align: center; /* Asegurar que el contenido se alinee al centro */
+    }
+
+    .container img{
+        max-width: 100%; /* Asegura que la imagen no desborde su contenedor */
+        height: auto;
+        margin-bottom: 20px; /* Añadir un espacio entre la imagen y otros elementos */
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .container button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent{
+        padding: 20px;
+    }
+    .container {
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .container button {
+        font-size: 12px;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .toggle-container{
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+}

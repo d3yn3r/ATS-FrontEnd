@@ -2,30 +2,33 @@
 
 .main-container {
     width: 90%;
-    margin: 10px auto;
-    margin-top: 20px;
-    padding: 10px;
+    margin: 5px auto;
+    margin-top: 10px;
+    padding: 5px;
     border-radius: 8px;
     background-color: #7d7c7c;
-    
 }
 
-.header, .content {
+.header,
+.content {
     margin-bottom: 10px;
 }
 
-.header-item, .content-item {
+.header-item,
+.content-item {
     display: flex;
     padding: 10px 0;
     border-bottom: 1px solid #f0f0f0;
 }
 
-.header-label, .content-label {
+.header-label,
+.content-label {
     font-weight: bold;
     margin-right: 3px;
 }
 
-.header-value, .content-value {
+.header-value,
+.content-value {
     font-size: 1rem;
     text-align: justify;
 }
@@ -34,6 +37,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 10px;
+    width: 70%;
 }
 
 .btn {
@@ -46,11 +50,30 @@
 
 .btn-primary {
     background-color: #f05321;
-    color: white;
+    color: #ffffff; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 20%;
 }
 
 .btn-primary:hover {
-    background-color: #ea8667;
+    background-color: #d7471a; 
+    transform: scale(1.05);
+}
+
+.btn-primary:active {
+    background-color: #bf3f17;
+    transform: scale(1); 
+}
+
+.btn-primary:focus {
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(240, 83, 33, 0.5); 
 }
 
 .btn-secondary {
@@ -63,20 +86,34 @@
 }
 
 .scrollable-content::-webkit-scrollbar {
-    
-    width: 10px; 
-  }
-  
-  .scrollable-content::-webkit-scrollbar-track {
+    width: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
     border-radius: 10px;
-    background: #f1f1f1; 
-  }
-  
-  .scrollable-content::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #f05321; 
-  }
-  
-  .scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #f05321;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
     background: #ea8667;
-  }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form{
+    display: flex;
+    justify-content: flex-start;
+    width: 30%;
+}
+
+mat-form-field{
+    margin-bottom: 0;
+}

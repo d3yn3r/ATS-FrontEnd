@@ -1,0 +1,162 @@
+[
+    {
+        "PK_Id_MisionEstado": 1,
+        "FK_Id_Estado": 1,
+        "FK_Id_Mision": 1,
+        "SNombreEstado": "En Asignación",
+        "SFechaRegistro": "2024-12-12",
+        "SDescripcion": "La misión ha sido asignada y está pendiente de ser aceptada."
+    },
+    {
+        "PK_Id_MisionEstado": 2,
+        "FK_Id_Estado": 2,
+        "FK_Id_Mision": 1,
+        "SNombreEstado": "Asignada",
+        "SFechaRegistro": "2024-12-13",
+        "SDescripcion": "La misión ha sido asignada a un agente y está lista para ser realizada."
+    },
+    {
+        "PK_Id_MisionEstado": 3,
+        "FK_Id_Estado": 1,
+        "FK_Id_Mision": 2,
+        "SNombreEstado": "En Asignación",
+        "SFechaRegistro": "2024-01-15",
+        "SDescripcion": "La misión ha sido asignada y está pendiente de ser aceptada."
+    },
+    {
+        "PK_Id_MisionEstado": 4,
+        "FK_Id_Estado": 2,
+        "FK_Id_Mision": 2,
+        "SNombreEstado": "Asignada",
+        "SFechaRegistro": "2024-01-16",
+        "SDescripcion": "La misión ha sido asignada a un agente y está lista para ser realizada."
+    },
+    {
+        "PK_Id_MisionEstado": 5,
+        "FK_Id_Estado": 3,
+        "FK_Id_Mision": 2,
+        "SNombreEstado": "Aceptado",
+        "SFechaRegistro": "2024-01-17",
+        "SDescripcion": "La misión ha sido aceptada por el agente y está en espera de ejecución."
+    },
+    {
+        "PK_Id_MisionEstado": 6,
+        "FK_Id_Estado": 1,
+        "FK_Id_Mision": 3,
+        "SNombreEstado": "En Asignación",
+        "SFechaRegistro": "2024-03-01",
+        "SDescripcion": "La misión ha sido asignada y está pendiente de ser aceptada."
+    },
+    {
+        "PK_Id_MisionEstado": 7,
+        "FK_Id_Estado": 2,
+        "FK_Id_Mision": 3,
+        "SNombreEstado": "Asignada",
+        "SFechaRegistro": "2024-03-02",
+        "SDescripcion": "La misión ha sido asignada a un agente y está lista para ser realizada."
+    },
+    {
+        "PK_Id_MisionEstado": 8,
+        "FK_Id_Estado": 3,
+        "FK_Id_Mision": 3,
+        "SNombreEstado": "En Proceso",
+        "SFechaRegistro": "2024-03-10",
+        "SDescripcion": "La misión está en proceso y se está llevando a cabo."
+    },
+    {
+        "PK_Id_MisionEstado": 9,
+        "FK_Id_Estado": 4,
+        "FK_Id_Mision": 3,
+        "SNombreEstado": "Completada",
+        "SFechaRegistro": "2024-04-01",
+        "SDescripcion": "La misión ha sido completada con éxito."
+    },
+    {
+        "PK_Id_MisionEstado": 10,
+        "FK_Id_Estado": 1,
+        "FK_Id_Mision": 4,
+        "SNombreEstado": "En Asignación",
+        "SFechaRegistro": "2024-05-05",
+        "SDescripcion": "La misión ha sido asignada y está pendiente de ser aceptada."
+    },
+    {
+        "PK_Id_MisionEstado": 11,
+        "FK_Id_Estado": 2,
+        "FK_Id_Mision": 4,
+        "SNombreEstado": "Asignada",
+        "SFechaRegistro": "2024-05-06",
+        "SDescripcion": "La misión ha sido asignada a un agente y está lista para ser realizada."
+    },
+    {
+        "PK_Id_MisionEstado": 12,
+        "FK_Id_Estado": 1,
+        "FK_Id_Mision": 5,
+        "SNombreEstado": "En Asignación",
+        "SFechaRegistro": "2024-06-10",
+        "SDescripcion": "La misión ha sido asignada y está pendiente de ser aceptada."
+    },
+    {
+        "PK_Id_MisionEstado": 13,
+        "FK_Id_Estado": 2,
+        "FK_Id_Mision": 5,
+        "SNombreEstado": "Asignada",
+        "SFechaRegistro": "2024-06-11",
+        "SDescripcion": "La misión ha sido asignada a un agente y está lista para ser realizada."
+    },
+    {
+        "PK_Id_MisionEstado": 14,
+        "FK_Id_Estado": 3,
+        "FK_Id_Mision": 5,
+        "SNombreEstado": "En Proceso",
+        "SFechaRegistro": "2024-07-01",
+        "SDescripcion": "La misión está en proceso y se está llevando a cabo."
+    },
+    {
+        "PK_Id_MisionEstado": 15,
+        "FK_Id_Estado": 1,
+        "FK_Id_Mision": 6,
+        "SNombreEstado": "En Asignación",
+        "SFechaRegistro": "2024-08-20",
+        "SDescripcion": "La misión ha sido asignada y está pendiente de ser aceptada."
+    },
+    {
+        "PK_Id_MisionEstado": 16,
+        "FK_Id_Estado": 2,
+        "FK_Id_Mision": 6,
+        "SNombreEstado": "Asignada",
+        "SFechaRegistro": "2024-08-21",
+        "SDescripcion": "La misión ha sido asignada a un agente y está lista para ser realizada."
+    },
+    {
+        "PK_Id_MisionEstado": 17,
+        "FK_Id_Estado": 7,
+        "FK_Id_Mision": 6,
+        "SNombreEstado": "Comprometida",
+        "SFechaRegistro": "2024-08-22",
+        "SDescripcion": "La misión se ha visto comprometida y está en proceso de resolución."
+    },
+    {
+        "PK_Id_MisionEstado": 18,
+        "FK_Id_Estado": 4,
+        "FK_Id_Mision": 6,
+        "SNombreEstado": "Completada",
+        "SFechaRegistro": "2024-08-25",
+        "SDescripcion": "La misión ha sido completada con éxito."
+    },
+    {
+        "PK_Id_MisionEstado": 19,
+        "FK_Id_Estado": 1,
+        "FK_Id_Mision": 8,
+        "SNombreEstado": "En Asignación",
+        "SFechaRegistro": "2024-08-21",
+        "SDescripcion": "La misión ha sido asignada y está pendiente de ser aceptada."
+    },
+    {
+        "PK_Id_MisionEstado": 20,
+        "FK_Id_Estado": 1,
+        "FK_Id_Mision": 9,
+        "SNombreEstado": "En Asignación",
+        "SFechaRegistro": "2024-08-19",
+        "SDescripcion": "La misión ha sido asignada y está pendiente de ser aceptada."
+    }
+]
