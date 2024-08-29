@@ -1,0 +1,25 @@
+.mat-tab-group{
+    overflow: hidden;
+}
+
+.buttons{
+    margin-left: 10px;
+}
+
+.btn{
+    padding: 10px 20px;
+   
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn{
+    background-color: #f05321;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #ea8667;
+}

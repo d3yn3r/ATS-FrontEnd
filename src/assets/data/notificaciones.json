@@ -1,0 +1,56 @@
+[
+    {
+        "PK_IdNotificacion": 1,
+        "FK_IdUsuarioNotifica": 2,
+        "SNombreUsuarioNotifica": "Yamato Terumī",
+        "FK_IdUsuarioNotificado": 1,
+        "SNombreUsuarioNotificado": "Kakashi Hatake",
+        "SNombreNotificacion": "Misión completada",
+        "SFechaNotificacion":"12/8/2024"
+    },
+    {
+        "PK_IdNotificacion": 2,
+        "FK_IdUsuarioNotifica": 2,
+        "SNombreUsuarioNotifica": "Yamato Terumī",
+        "FK_IdUsuarioNotificado": 1,
+        "SNombreUsuarioNotificado": "Kakashi Hatake",
+        "SNombreNotificacion": "Mision Comprometida",
+        "SFechaNotificacion":"12/8/2024"
+    },
+    {
+        "PK_IdNotificacion": 3,
+        "FK_IdUsuarioNotifica": 4,
+        "SNombreUsuarioNotifica": "Itachi Uchiha",
+        "FK_IdUsuarioNotificado": 3,
+        "SNombreUsuarioNotificado": "Yamato Terumī",
+        "SNombreNotificacion": "Ayuda",
+        "SFechaNotificacion":"12/8/2024"
+    },
+    {
+        "PK_IdNotificacion": 4,
+        "FK_IdUsuarioNotifica": 2,
+        "SNombreUsuarioNotifica": "Yamato Terumī",
+        "FK_IdUsuarioNotificado": 1,
+        "SNombreUsuarioNotificado": "Kakashi Hatake",
+        "SNombreNotificacion": "Mision fallida",
+        "SFechaNotificacion":"12/8/2024"
+    },
+    {
+        "PK_IdNotificacion": 5,
+        "FK_IdUsuarioNotifica": 2,
+        "SNombreUsuarioNotifica": "Yamato Terumī",
+        "FK_IdUsuarioNotificado": 1,
+        "SNombreUsuarioNotificado": "Kakashi Hatake",
+        "SNombreNotificacion": "Nuevo Reporte",
+        "SFechaNotificacion":"12/8/2024"
+    },
+    {
+        "PK_IdNotificacion": 6,
+        "FK_IdUsuarioNotifica": 2,
+        "SNombreUsuarioNotifica": "Yamato Terumī",
+        "FK_IdUsuarioNotificado": 1,
+        "SNombreUsuarioNotificado": "Kakashi Hatake",
+        "SNombreNotificacion": "Nuevo Mensaje",
+        "SFechaNotificacion":"12/8/2024"
+    }
+]

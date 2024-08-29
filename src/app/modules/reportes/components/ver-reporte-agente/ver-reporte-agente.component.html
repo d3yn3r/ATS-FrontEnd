@@ -1,0 +1,36 @@
+<div>
+    <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+        <ng-container matColumnDef="PK_Id_Reporte">
+            <th mat-sort-header mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let element">{{element.PK_Id_Reporte}}</td>
+        </ng-container>
+    
+        <ng-container matColumnDef="SNombreEstado">
+            <th mat-sort-header mat-header-cell *matHeaderCellDef>Estado</th>
+            <td mat-cell *matCellDef="let element">{{element.SNombreEstado}}</td>
+        </ng-container>
+    
+        <ng-container matColumnDef="SNombreUsuarioReporta">
+            <th mat-sort-header mat-header-cell *matHeaderCellDef>Usuario Reportado</th>
+            <td mat-cell *matCellDef="let element">{{element.SNombreUsuarioReportado}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="SFechaReporte">
+            <th mat-sort-header mat-header-cell *matHeaderCellDef>Fecha Reporte</th>
+            <td mat-cell *matCellDef="let element">{{element.SFechaReporte}}</td>
+        </ng-container>
+        SFechaReporte
+        <tr mat-header-row *matHeaderRowDef="columnsTable"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsTable;" (click)="AbrirModalRevisarReporte(row)"
+        [ngClass]="{'table-row': true}"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5,10,15]"
+                  aria-label="Página"
+                  color="accent" showFirstLastButtons>
+    </mat-paginator>
+    <br>
+    <button class="btn btn-primary" (click)="crearReporte()">Crear Reporte</button>
+
+</div>
+
+

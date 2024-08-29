@@ -1,0 +1,43 @@
+<div class="main-container" *ngIf="noMensaje ===''">
+
+    <div class="header">
+        <div class="header-item">
+            <div class="header-label">ID:</div>
+            <p class="header-value">{{mensaje.PK_Id_Mensaje}}</p>
+        </div>
+        <div class="header-item">
+            <div class="header-label">Fecha Mensaje:</div>
+            <p class="header-value">{{mensaje.SFechaMensaje}}</p>
+        </div>
+        <div class="content-item">
+            <div class="content-label">Tipo Mensaje: </div>
+            <p class="content-value">{{mensaje.STipoMensaje}}</p>
+        </div>
+        <div class="content-item">
+            <div class="content-label">Severidad: </div>
+            <p class="content-value">{{mensaje.SSeveridad}}</p>
+        </div>
+        <div class="header-item">
+            <div class="header-label">Remitente:</div>
+            <p class="header-value">{{mensaje.SNombreUsuarioEnvia}}</p>
+        </div>
+        <div class="header-item">
+            <div class="header-label">Cantidad Refuerzos:</div>
+            <p class="header-value">{{mensaje.NNumeroRefuerzos}}</p>
+        </div>
+    </div>
+
+    <div class="content scrollable-content">
+        <div class="content-item">
+            <div class="content-label scrollable-content">Mensaje: </div>
+
+                <p class="content-value">{{mensaje.SDescripcion}}</p>
+        </div>
+    </div>
+
+    <br>
+</div>
+
+<div class="noMensaje" *ngIf="noMensaje!==''">
+    <p>No haz seleccionado un mensaje</p>
+</div>

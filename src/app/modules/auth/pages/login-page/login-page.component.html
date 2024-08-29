@@ -1,0 +1,56 @@
+<ngx-spinner template='
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+    <img src="../../../assets/img/spinner.png" style="max-width: 50px; height: auto; alt="Spinner">
+    <h2 style="color: white; padding: 10px;">Cargando...</h2>
+  </div>'
+>
+</ngx-spinner>
+<div class="parent">
+    <div class="container">
+        <div class="form-container">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <h1>Iniciar Sesión</h1>
+                <mat-form-field color="accent">
+                    <mat-label>Correo electrónico</mat-label>
+                    <input matInput type="email" formControlName="sEmail">
+                </mat-form-field>
+
+                <mat-form-field color="accent">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput type="password" formControlName="sHashedPassword">
+                </mat-form-field>
+                
+                <mat-form-field color="accent">
+                    <mat-label>Codigo OTP</mat-label>
+                    <input matInput type="number" formControlName="sAccessToken">
+                </mat-form-field>
+                
+                <div class="enlaces">
+                    <a href="/forgotpassword" > ¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                
+                <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+                    <span>Iniciar sesión</span>
+                </button>
+
+                <div class="enlaces">
+                    <a>o</a>
+                    <a href="/register">¿No tienes una cuenta, registrate?</a>
+                </div>
+
+                <div *ngIf="loginFallido" class="login-fallido">
+                    <p>Datos incorrectos, intentalo nuevamente</p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="image">
+                    <img src="../../../assets/img/login2.png" alt="Imagen descriptiva">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

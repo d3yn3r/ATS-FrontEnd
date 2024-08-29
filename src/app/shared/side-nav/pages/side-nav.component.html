@@ -1,0 +1,50 @@
+<div class="app-container">
+    <!-- Barra de navegación horizontal (navbar) -->
+    <div class="navbarTop">
+        <button class="perfil" (click)="routePerfil()">
+            <img src="../../../assets/img/profile/1.png" alt="Imagen de perfil">
+            <p>{{authService.getNombre()}}</p>
+        </button>
+
+        <button class="notificaciones" mat-button [matMenuTriggerFor]="menu">
+            <mat-icon svgIcon="bell"></mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <app-notificaciones-item></app-notificaciones-item>
+        </mat-menu>
+    </div>
+
+    <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+        <div class="logo-container">
+            <div *ngIf="!collapsed">
+                <button class="logo" @rotate (click)="toggleCollapse()">A</button>
+            </div>
+            <div *ngIf="collapsed" class="logo-container">
+                <button class="logo" @rotate (click)="toggleCollapse()">A</button>
+                <div class="logo-text" @fadeInOut *ngIf="collapsed">ANBU <br>Top Secret</div>
+            </div>
+
+        </div>
+        <div class="scroll-content">
+            <ul class="sidenav-nav">
+                <li class="sidenav-nav-item" *ngFor="let data of navData">
+                    <a class="sidenav-nav-link" [routerLink]="[data.routeLink]"
+                        [matTooltip]="collapsed ? '' : data.label" matTooltipPosition="right" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">
+                        <mat-icon class="sidenav-link-icon" [svgIcon]="data.icon"></mat-icon>
+                        <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                            {{data.label}}
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div (click)="cerrarSesion()" class="sidenav-nav logo-container" style="color: white; margin-top: 10px;">
+            <mat-icon class="sidenav-link-icon" svgIcon="energia" [matTooltip]="collapsed ? '' : 'Cerrar Sesión'"
+                matTooltipPosition="right"></mat-icon>
+            <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                Cerrar Sesión
+            </span>
+        </div>
+    </div>
+</div>

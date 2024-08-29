@@ -1,0 +1,62 @@
+[
+  {
+    "PK_Id_Reporte": 1,
+    "SNombreEstado": "Archivado",
+    "FK_Id_UsuarioReporta": 2,
+    "SNombreUsuarioReporta": "Yamato Terumī",
+    "FK_Id_UsuarioReportado": 101,
+    "SNombreUsuarioReportado": "Asuma Sarutobi",
+    "SDescripcion": "Actividad sospechosa en la aldea durante la noche.",
+    "SMotivo": "Investigación sobre posible infiltración enemiga.",
+    "SEvidencia": "Imágenes de cámaras de vigilancia mostrando movimientos inusuales.",
+    "SFechaReporte": "2024-08-01"
+  },
+  {
+    "PK_Id_Reporte": 2,
+    "SNombreEstado": "Archivado",
+    "FK_Id_UsuarioReporta": 2,
+    "SNombreUsuarioReporta": "Yamato Terumī",
+    "FK_Id_UsuarioReportado": 102,
+    "SNombreUsuarioReportado": "Itachi Uchiha",
+    "SDescripcion": "Durante una patrulla rutinaria en los límites del bosque que rodea la aldea, se detectó un flujo de chakra no identificado que no pertenece a ningún miembro registrado del equipo ANBU ni a ninjas conocidos de la aldea. El chakra emite una energía inusual que ha despertado sospechas sobre una posible incursión o la presencia de un shinobi extranjero no autorizado. La fuente del chakra parece moverse sigilosamente a través del terreno, evitando contacto directo y empleando técnicas avanzadas de ocultación. Se ha recomendado una investigación inmediata para determinar la naturaleza y la amenaza potencial de este chakra.",
+    "SMotivo": "Análisis del origen y naturaleza del chakra.",
+    "SEvidencia": "Análisis de muestras de chakra recogidas en el lugar.",
+    "SFechaReporte": "2024-08-01"
+  },
+  {
+    "PK_Id_Reporte": 3,
+    "SNombreEstado": "Pendiente",
+    "FK_Id_UsuarioReporta": 2,
+    "SNombreUsuarioReporta": "Yamato Terumī",
+    "FK_Id_UsuarioReportado": 103,
+    "SNombreUsuarioReportado": "Shisui Uchiha",
+    "SDescripcion": "Posible intento de sabotaje en la misión de entrenamiento.",
+    "SMotivo": "Verificación de la seguridad durante el entrenamiento.",
+    "SEvidencia": "Testimonios de los participantes y análisis de equipos dañados.",
+    "SFechaReporte": "2024-08-01"
+  },
+  {
+    "PK_Id_Reporte": 4,
+    "SNombreEstado": "Aceptado",
+    "FK_Id_UsuarioReporta": 2,
+    "SNombreUsuarioReporta": "Yamato Terumī",
+    "FK_Id_UsuarioReportado": 104,
+    "SNombreUsuarioReportado": "Danzo_Shimura",
+    "SDescripcion": "Descubrimiento de documentos secretos en la oficina del Hokage.",
+    "SMotivo": "Asegurarse de que la información sensible no haya sido comprometida.",
+    "SEvidencia": "Copia de los documentos encontrados y su contenido revisado.",
+    "SFechaReporte": "2024-08-01"
+  },
+  {
+    "PK_Id_Reporte": 5,
+    "SNombreEstado": "Pendiente",
+    "FK_Id_UsuarioReporta": 2,
+    "SNombreUsuarioReporta": "Yamato Terumī",
+    "FK_Id_UsuarioReportado": 105,
+    "SNombreUsuarioReportado": "Sai",
+    "SDescripcion": "Rastreo de actividad en la región frontera de la aldea.",
+    "SMotivo": "Prevención de posibles incursiones o ataques.",
+    "SEvidencia": "Registro de movimientos y avistamientos en la frontera.",
+    "SFechaReporte": "2024-08-01"
+  }
+]

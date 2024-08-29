@@ -1,0 +1,11 @@
+<div *ngIf="notificacionesLength !== 0">
+    <div *ngFor="let item of notificacionesList">
+        <button>
+            <p>{{item.SNombreNotificacion}}</p>
+        </button>
+    </div>
+</div>
+
+<div *ngIf="notificacionesLength === 0">
+    <p>No tienes notificaiones</p>
+</div>

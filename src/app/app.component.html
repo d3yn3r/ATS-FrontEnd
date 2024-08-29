@@ -1,0 +1,19 @@
+<ngx-spinner template='
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+    <img src="../../../assets/img/spinner.png" style="max-width: 50px; height: auto; alt="Spinner">
+    <h2 style="color: white; padding: 10px;">Cargando...</h2>
+  </div>'
+>
+</ngx-spinner>
+
+<ng-container *ngIf="!isLogged.isLogged(); else loggedInContent">
+    <router-outlet></router-outlet>
+</ng-container>
+
+<ng-template #loggedInContent>
+    <div style="height: 100%;">
+        <app-side-nav (onToggleSideNav)="onToggleSideNav($event)"></app-side-nav>
+        <app-layout [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth">
+        </app-layout>
+    </div>
+</ng-template>

@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="container">
+        <div class="top">
+            <mat-dialog-content class="scrollable-content">
+                <div *ngFor="let item of dataSource">
+                    <div class="item">
+                        <mat-card>
+                            <div class="item-top">
+                                <h2 class="item-titulo">{{item.SNombreEstado}}</h2>
+                                <span></span>
+                                <p class="item-fecha">{{item.SFechaRegistro}}</p>
+                            </div>
+                            <div class="item-descripcion">
+                                <p>{{item.SDescripcion}}</p>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+            </mat-dialog-content>
+        </div>
+
+        <div class="bottom">
+            <form action="" [formGroup]="cambiarEstadoForm">
+                <mat-form-field class="mat-50" color="accent">
+                    <mat-label>Nuevo estado</mat-label>
+                    <mat-select formControlName="estado">
+                        <mat-option>Completada</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="mat-50" color="accent">
+                    <mat-label>Motivo</mat-label>
+                    <textarea class="scrollable-content" color="accent" formControlName="descripcion" matInput cdkTextareaAutosize
+                        #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="10" cdkAutosizeMaxRows="10"></textarea>
+                </mat-form-field>
+            </form>
+            <div class="btn">
+                <button (click)="cambiarEstado()">Cambiar estado</button>
+            </div>
+        </div>
+    </div>
+</div>

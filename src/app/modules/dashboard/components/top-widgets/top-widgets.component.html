@@ -1,0 +1,51 @@
+<div class="widget-container">
+  <div class="widget green" *ngIf="rol === 'Lider-ANBU'">
+    <div class="icon">
+      <mat-icon svgIcon="usuarios-alt"></mat-icon>
+    </div>
+    <div class="value">
+      <div class="top">32</div>
+      <div class="bottom">Agentes Activos</div>
+    </div>
+  </div>
+
+  <div class="widget blue">
+    <div class="icon">
+      <mat-icon svgIcon="comprobacion-del-portapapeles"></mat-icon>
+    </div>
+    <div class="value">
+      <div class="top">2044</div>
+      <div class="bottom">Misiones Completadas</div>
+    </div>
+  </div>
+
+  <div class="widget yellow">
+    <div class="icon">
+      <mat-icon svgIcon="usuarios-alt"></mat-icon>
+    </div>
+    <div class="value">
+      <div class="top">30</div>
+      <div class="bottom">Misiones en progreso</div>
+    </div>
+  </div>
+
+  <div class="widget red">
+    <div class="icon">
+      <mat-icon svgIcon="hourglass-end"></mat-icon>
+    </div>
+    <div class="value">
+      <div class="top">10</div>
+      <div class="bottom">Misiones retrasadas</div>
+    </div>
+  </div>
+
+  <div *ngIf="rol === 'Agente'" class="widget money">
+    <div class="icon">
+      <mat-icon svgIcon="dolar-de-saco"></mat-icon>
+    </div>
+    <div class="value">
+      <div class="top">$1.500</div>
+      <div class="bottom">Ganancias Totales</div>
+    </div>
+  </div>
+</div>

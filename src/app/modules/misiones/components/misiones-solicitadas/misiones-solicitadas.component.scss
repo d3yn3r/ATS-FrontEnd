@@ -1,0 +1,29 @@
+.table-row:hover {
+  background-color: #edeaea3c;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  
+  table {
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+  }
+
+  .table-row:hover {
+    background-color: #edeaea3c;
+    cursor: pointer;
+  }
+}

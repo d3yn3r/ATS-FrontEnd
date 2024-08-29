@@ -1,0 +1,38 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%; /* Asegura que el componente ocupe toda la altura disponible */
+    overflow: hidden; /* Evita que los componentes hijos generen barras de desplazamiento */
+    margin-bottom: 2rem;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+}
+
+@media (max-width:768px){
+    .main{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+}
