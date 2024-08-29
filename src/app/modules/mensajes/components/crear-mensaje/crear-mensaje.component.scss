@@ -14,7 +14,7 @@
 
 .btn{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     width: 90%;
     margin-left: 10px;
     border: none;
@@ -64,4 +64,33 @@ button:focus {
 
 .scrollable-content::-webkit-scrollbar-thumb:hover {
     background: #ea8667;
+}
+
+.noDatos{
+    margin-left: 20px;
+    color: #bf3f17;
+}
+
+@media (max-width:768px){
+    form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mat-50{
+        width: 98%;
+        margin: 1%;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    button{
+        width: 50%;
+    }
 }

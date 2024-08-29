@@ -17,7 +17,7 @@ import { CrearReporteComponent } from '../crear-reporte/crear-reporte.component'
 export class VerReporteAgenteComponent implements OnInit, OnDestroy {
 
   private unsubscribe$ = new Subject<void>();
-  columnsTable = ['PK_Id_Reporte','SNombreEstado','SNombreUsuarioReporta']
+  columnsTable = ['PK_Id_Reporte','SNombreEstado','SNombreUsuarioReporta','SFechaReporte']
   dataSource !: any;
 
 

@@ -51,12 +51,12 @@ export class MisionesAceptadasComponent implements OnInit,OnDestroy{
           console.error('Error al obtener las misiones:', err);
         },
         complete: () => {
-          console.log('Obtención de misiones asignadas completa');
+
         }
       })
   }
 
-  AbrirModalRevisarMision(mision: GetMisionInterface){
+  AbrirModalCambiarEstado(mision: GetMisionInterface){
     this.dialog.open(ModalCambiarEstadoComponent,{
       width:'70%',
       height:'90%',

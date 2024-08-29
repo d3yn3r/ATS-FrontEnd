@@ -32,32 +32,38 @@
         <div class="footer">
 
             <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Agente'">
-                <button class="btn btn-primary">Aceptar</button>
-                <button class="btn btn-secondary">Rechazar</button>
+                <button class="btn btn-primary" (click)="aceptarMision()">Aceptar</button>
+                <button class="btn btn-secondary" (click)="rechazarMision()">Rechazar</button>
             </div>
-            <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Lider-ANBU'">
-                <button class="btn btn-primary">Asignar Agente</button>
-                <button class="btn btn-secondary">Rechazar</button>
-            </div>
-            <div class="buttons"
-                *ngIf="inputdata.SEstadoMision !== 'En Asignación' && inputdata.SEstadoMision !== 'Completada' && rolUsuario === 'Lider-ANBU'">
-                <button class="btn btn-primary">Cancelar Misión</button>
-            </div>
-            <div class="form">
-                <form action="">
-                    <mat-form-field fxFlex="20%" color="accent">
+
+            <div class="form" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Lider-ANBU'">
+                <form [formGroup]="asignarForm">
+                    <mat-form-field color="accent" class="mat-50" subscriptSizing="dynamic">
                         <mat-label>Seleccionar Agente</mat-label>
-                        <mat-select>
+                        <mat-select formControlName="SNombreAgente">
                             <mat-option value="Yamato">Yamato</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </form>
+                <div class="buttons" *ngIf="componente === 'misiones-solicitadas' && rolUsuario === 'Lider-ANBU'">
+                    <button class="btn btn-primary" (click)="aceptarSolicitud()">Asignar Agente</button>
+                    <button class="btn btn-secondary" (click)="rechazarMision()">Rechazar</button>
+                </div>
+
             </div>
+
+            <div class="buttons"
+                *ngIf="inputdata.SEstadoMision !== 'En Asignación' && inputdata.SEstadoMision !== 'Completada' && rolUsuario === 'Lider-ANBU'">
+                <button class="btn btn-primary" (click)="cancelarMision()">Cancelar Misión</button>
+            </div>
+
+
+
 
 
         </div>
 
     </mat-dialog-content>
     <br>
-
 </div>
+<p class="noDatos" *ngIf="noDatos">Debes seleccionar un agente</p>

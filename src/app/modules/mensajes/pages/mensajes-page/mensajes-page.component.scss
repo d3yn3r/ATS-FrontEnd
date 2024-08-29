@@ -21,3 +21,18 @@
 .right{
     width: 50%;
 }
+
+@media (max-width:768px){
+    .main{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+}

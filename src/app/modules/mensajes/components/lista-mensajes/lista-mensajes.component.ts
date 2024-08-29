@@ -50,7 +50,6 @@ export class ListaMensajesComponent implements OnInit,OnDestroy {
     .pipe(takeUntil(this.unsubscribe$))
     .subscribe({
       next:(res)=>{
-        console.log(PK_Id_Usuario)
         this.dataSource = new MatTableDataSource<GetMensajeInterface>(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -64,8 +63,8 @@ export class ListaMensajesComponent implements OnInit,OnDestroy {
 
   crearMensaje(){
     this.dialog.open(CrearMensajeComponent,{
-      width:'60%',
-      height:'80%',
+      width:'70%',
+      height:'90%',
       enterAnimationDuration:'500ms',
       exitAnimationDuration:'500ms',
     })

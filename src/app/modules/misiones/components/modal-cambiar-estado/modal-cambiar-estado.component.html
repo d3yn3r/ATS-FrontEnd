@@ -22,23 +22,24 @@
                 </div>
 
                 <div class="bottom">
-                    <form action="" [formGroup]="cambiarEstadoForm">
-                        <mat-form-field formControlName="estado" class="mat-50" color="accent">
+                    <form [formGroup]="cambiarEstadoForm">
+                        <mat-form-field class="mat-50" color="accent">
                             <mat-label>Nuevo estado</mat-label>
-                            <mat-select>
-                                <mat-option></mat-option>
+                            <mat-select formControlName="estado">
+                                <mat-option value="Completada">Completada</mat-option>
                             </mat-select>
                         </mat-form-field>
 
                         <mat-form-field class="mat-50" color="accent">
                             <mat-label>Motivo</mat-label>
                             <textarea class="scrollable-content" color="accent" matInput cdkTextareaAutosize
-                                #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="10"
-                                cdkAutosizeMaxRows="10"></textarea>
+                                #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="8"
+                                cdkAutosizeMaxRows="10" formControlName="descripcion"></textarea>
                         </mat-form-field>
                     </form>
+                    <p class="noDatos" *ngIf="noDatos">Completa los campos obligatorios</p>
                     <div class="btn">
-                        <button>Cambiar estado</button>
+                        <button (click)="cambiarEstado()">Cambiar estado</button>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <mat-tab-group color="accent">
     <mat-tab label="Nuevo Mensaje">
         <div class="main">
-            <form action="" [formGroup]="mensajeForm">
+            <form [formGroup]="mensajeForm">
                 <mat-form-field color="accent" class="mat-50">
                     <mat-label>Destinatario</mat-label>
                     <mat-select formControlName="FK_Id_UsuarioRecibe">
@@ -40,7 +40,8 @@
         </div>
 
         <div class="btn">
-            <button>Enviar</button>
+            <button (click)="postMensaje()">Enviar</button>
+            <p class="noDatos" *ngIf="noDatos">Debes completar los campos</p>
         </div>
     </mat-tab>
 </mat-tab-group>

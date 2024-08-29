@@ -37,10 +37,14 @@
                 </div>
             </mat-dialog-content>
             <br>
-            <div class="buttons" *ngIf="rol === 'Lider-ANBU'">
-                <button class="btn btn-primary">Aceptar</button>
-                <button class="btn btn-secondary">Archivar reporte</button>
+            <div class="footer">
+                <div class="buttons" *ngIf="rol === 'Lider-ANBU'">
+                    <button (click)="aceptarReporte()" class="btn btn-primary">Aceptar</button>
+                    <button (click)="archivarReporte()" class="btn btn-secondary">Archivar reporte</button>
+                </div>
+
             </div>
+
         </div>
     </mat-tab>
 </mat-tab-group>

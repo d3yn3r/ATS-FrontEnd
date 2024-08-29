@@ -25,6 +25,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { PageNotAuthorizedComponent } from './page-not-authorized/page-not-authorized.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NotificacionesItemComponent } from './side-nav/components/notificaciones-item/notificaciones-item.component';
+import { ModalSimpleComponent } from './modal-simple/modal-simple.component';
 
 
 
@@ -36,7 +37,8 @@ import { NotificacionesItemComponent } from './side-nav/components/notificacione
     LayoutComponent,
     PageNotAuthorizedComponent,
     PageNotFoundComponent,
-    NotificacionesItemComponent
+    NotificacionesItemComponent,
+    ModalSimpleComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ import { NotificacionesItemComponent } from './side-nav/components/notificacione
     SideNavComponent,
     LayoutComponent,
     PageNotAuthorizedComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ModalSimpleComponent
   ]
 })
 export class SharedModule {

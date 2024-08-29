@@ -29,6 +29,7 @@ import { CustomMatPaginatorIntl } from 'src/app/shared/mat-paginator/mat-paginat
 import { DetalleMisionComponent } from './components/detalle-mision/detalle-mision.component';
 import { TrazabilidadMisionComponent } from './components/trazabilidad-mision/trazabilidad-mision.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -63,7 +64,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatDatepickerModule,
     MatDialogModule,
     MatPaginatorModule,
-    MatTabsModule
+    MatTabsModule,
+    SharedModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl }]

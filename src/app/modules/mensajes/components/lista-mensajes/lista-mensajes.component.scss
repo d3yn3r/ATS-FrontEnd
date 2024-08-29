@@ -1,22 +1,41 @@
-th{
-    text-align: center;
-}
+/* src/app/app.component.css */
 
-.table-row:hover {
-    background-color: #edeaea3c;
-    cursor: pointer;
-}
-
-.table{
-    margin: 10px auto;
+.main-container {
+    width: 90%;
+    margin: 5px auto;
     margin-top: 10px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 8px;
+    background-color: #7d7c7c;
+}
+
+.header,
+.content {
+    margin-bottom: 10px;
+}
+
+.header-item,
+.content-item {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header-label,
+.content-label {
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.header-value,
+.content-value {
+    font-size: 1rem;
+    text-align: justify;
 }
 
 .btn{
     display: flex;
-    justify-content: start;
+    justify-content: end;
     width: 100%;
     margin-left: 10px;
     border: none;
@@ -48,4 +67,112 @@ button:active {
 button:focus {
     outline: none; 
     box-shadow: 0 0 0 3px rgba(240, 83, 33, 0.5); 
+}
+
+
+.scrollable-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #f05321;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #ea8667;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.noDatos {
+    margin-left: 20px;
+    color: #bf3f17;
+}
+
+@media (max-width:768px) {
+
+    .header-item,
+    .content-item {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .buttons{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .mat-50{
+        width: 68%;
+        margin: 1%;
+    }
+}
+
+@media (min-width:769px){
+    .header-item,
+    .content-item {
+        display: flex;
+        flex-direction: row;
+        padding: 5px 0;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    form{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .buttons{
+        width: 48%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .mat-50{
+        width: 68%;
+        margin: 1%;
+    }
 }

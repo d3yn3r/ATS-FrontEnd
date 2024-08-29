@@ -21,21 +21,21 @@
 
         <div class="bottom">
             <form action="" [formGroup]="cambiarEstadoForm">
-                <mat-form-field formControlName="estado" class="mat-50" color="accent">
+                <mat-form-field class="mat-50" color="accent">
                     <mat-label>Nuevo estado</mat-label>
-                    <mat-select>
-                        <mat-option></mat-option>
+                    <mat-select formControlName="estado">
+                        <mat-option>Completada</mat-option>
                     </mat-select>
                 </mat-form-field>
 
                 <mat-form-field class="mat-50" color="accent">
                     <mat-label>Motivo</mat-label>
-                    <textarea class="scrollable-content" color="accent" matInput cdkTextareaAutosize
+                    <textarea class="scrollable-content" color="accent" formControlName="descripcion" matInput cdkTextareaAutosize
                         #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="10" cdkAutosizeMaxRows="10"></textarea>
                 </mat-form-field>
             </form>
             <div class="btn">
-                <button>Cambiar estado</button>
+                <button (click)="cambiarEstado()">Cambiar estado</button>
             </div>
         </div>
     </div>

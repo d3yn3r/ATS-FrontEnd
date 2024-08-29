@@ -57,7 +57,7 @@ export class MisionesSolicitadasComponent implements OnInit,OnDestroy {
           console.error('Error al obtener las misiones:', err);
         },
         complete: () => {
-          console.log('Obtención de misiones solicitadas completa');
+          
         }
       })
   }

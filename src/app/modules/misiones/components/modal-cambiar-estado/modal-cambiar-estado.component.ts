@@ -6,6 +6,7 @@ import { GetMisionEstadosInterface } from 'src/app/interfaces/mision-estados.int
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { MisionEstadoService } from '../../services/misionEstado.service';
 import { GetMisionInterface } from 'src/app/interfaces/mision.interface';
+import { ModalSimpleComponent } from 'src/app/shared/modal-simple/modal-simple.component';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class ModalCambiarEstadoComponent implements OnInit,OnDestroy{
   cambiarEstadoForm !: FormGroup;
   inputdata!:GetMisionInterface;
   dataSource !: GetMisionEstadosInterface[];
-
+  noDatos : boolean = false;
 
   @ViewChild('autosize') autosize !: CdkTextareaAutosize;
 
@@ -56,7 +57,6 @@ export class ModalCambiarEstadoComponent implements OnInit,OnDestroy{
     .subscribe({
       next:(res)=>{
         this.dataSource = res.reverse();
-        console.log(this.dataSource)
       },
       error: (err)=>{
 
@@ -65,6 +65,27 @@ export class ModalCambiarEstadoComponent implements OnInit,OnDestroy{
 
       }
     })
+  }
+
+  cambiarEstado() {
+    const data = {
+      estado: this.cambiarEstadoForm.get('estado')?.value,
+      descripcion: this.cambiarEstadoForm.get('descripcion')?.value
+    }
+    console.log(data)
+    if (this.cambiarEstadoForm.valid) {
+      this.ref.close();
+      this.dialog.open(ModalSimpleComponent, {
+        width: "42%",
+        height: "42%",
+        data: {
+          titulo: 'Misión Aceptada',
+          mensaje: `La mision ${this.inputdata.SNombreMision} ha sido aceptada`
+        }
+      })
+    } else {
+      this.noDatos = true;
+    }
   }
 
 }

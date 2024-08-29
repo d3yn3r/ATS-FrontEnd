@@ -24,6 +24,8 @@ import { RevisarReporteComponent } from './components/revisar-reporte/revisar-re
 import { VerReporteLiderComponent } from './components/ver-reporte-lider/ver-reporte-lider.component';
 import { VerReporteAgenteComponent } from './components/ver-reporte-agente/ver-reporte-agente.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -55,7 +57,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatNativeDateModule, 
     MatDatepickerModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: []

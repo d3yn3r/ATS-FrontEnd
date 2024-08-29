@@ -13,6 +13,7 @@ export class NotificacionesItemComponent implements OnInit {
   private unsubscribe$ = new Subject<void>();
 
   notificacionesList!:GetNotificacionInterface[];
+  notificacionesLength:number = 0;
   userId: string | null = localStorage.getItem('PK_Id_Usuario');
   constructor(
     private notificacionService: NotificacionService
@@ -36,6 +37,7 @@ export class NotificacionesItemComponent implements OnInit {
     .subscribe({
       next:(res) => {
         this.notificacionesList = res;
+        this.notificacionesLength = this.notificacionesList.length;
       },
       error:(err) =>{
         alert("ha ocurrido un error al obtener las notificaciones")

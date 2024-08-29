@@ -60,8 +60,8 @@ export class SolicitudesPageComponent{
 
   AbrirModalRevisarSolicitud(Usuario: GetNuevoUsuarioInterface){
     this.dialog.open(ModalRevisarSolicitudComponent,{
-      width:'50%',
-      height:'85%',
+      width:'70%',
+      height:'90%',
       enterAnimationDuration:'500ms',
       exitAnimationDuration:'500ms',
       autoFocus: false,

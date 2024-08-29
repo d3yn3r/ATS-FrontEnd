@@ -1,11 +1,10 @@
+<h1>Reportes</h1>
 <div class="main">
-    <div class="left">
-        <div *ngIf="rol === 'Lider-ANBU'">
-            <app-ver-reporte-lider></app-ver-reporte-lider>
-        </div>
-        
-        <div *ngIf="rol === 'Agente'">
-            <app-ver-reporte-agente></app-ver-reporte-agente>
-        </div>
+    <div *ngIf="rol === 'Lider-ANBU'">
+        <app-ver-reporte-lider></app-ver-reporte-lider>
+    </div>
+
+    <div *ngIf="rol === 'Agente'">
+        <app-ver-reporte-agente></app-ver-reporte-agente>
     </div>
 </div>

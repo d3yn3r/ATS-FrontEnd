@@ -3,8 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MisionEstadoService } from '../../services/misionEstado.service';
 import { GetMisionEstadosInterface } from 'src/app/interfaces/mision-estados.interface';
 import { ModalRevisarMisionComponent } from '../modal-revisar-mision/modal-revisar-mision.component';
-import { Subject, take, takeUntil } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ModalCambiarEstadoComponent } from '../modal-cambiar-estado/modal-cambiar-estado.component';
+import { ModalSimpleComponent } from 'src/app/shared/modal-simple/modal-simple.component';
 
 @Component({
   selector: 'app-trazabilidad-mision',
@@ -26,7 +29,8 @@ export class TrazabilidadMisionComponent implements OnInit, OnDestroy {
   constructor(
     private formBuilder: FormBuilder,
     private misionEstadoService: MisionEstadoService,
-
+    public ref: MatDialogRef<ModalCambiarEstadoComponent>,
+    private dialog: MatDialog
   ){
 
   }
@@ -42,7 +46,7 @@ export class TrazabilidadMisionComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
-  private CargarFormularios():void{
+  private CargarFormularios(){
     this.cambiarEstadoForm = this.formBuilder.group({
       estado: this.formBuilder.control('', Validators.required),
       descripcion: this.formBuilder.control('',Validators.required)
@@ -55,7 +59,6 @@ export class TrazabilidadMisionComponent implements OnInit, OnDestroy {
     .subscribe({
       next:(res)=>{
         this.dataSource = res.reverse();
-        console.log(this.dataSource)
       },
       error: (err)=>{
 
@@ -64,6 +67,25 @@ export class TrazabilidadMisionComponent implements OnInit, OnDestroy {
 
       }
     })
+  }
+
+  cambiarEstado(){
+    const data = {
+      estado: this.cambiarEstadoForm.get('estado')?.value,
+      descripcion: this.cambiarEstadoForm.get('descripcion')?.value
+    }
+
+    if(this.cambiarEstadoForm.valid){
+      this.ref.close()
+      this.dialog.open(ModalSimpleComponent, {
+        width: "42%",
+        height: "42%",
+        data: {
+          titulo: 'Estado Cambiado',
+          mensaje: `La mision ${this.inputdata.SNombreMision} ha cambiado al estado${data.estado}`
+        }
+      })
+    }
   }
 
 }
