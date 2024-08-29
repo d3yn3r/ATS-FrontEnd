@@ -69,6 +69,10 @@ button:focus {
     box-shadow: 0 0 0 3px rgba(240, 83, 33, 0.5); 
 }
 
+th{
+    text-align: center;
+}
+
 
 .scrollable-content::-webkit-scrollbar {
     width: 10px;
@@ -113,22 +117,18 @@ button:focus {
         justify-content: center;
     }
 
-    .buttons {
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    .buttons{
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
 
     .mat-50{
         width: 68%;
         margin: 1%;
+    }
+
+    .btn{
+        
+        width: 100%;
+    }
+    button{
+        width: 65%;
     }
 }
 
@@ -145,11 +145,6 @@ button:focus {
         justify-content: center;
     }
 
-    .buttons {
-        display: flex;
-        flex-direction: row;
-    }
-
     form{
         width: 100%;
         display: flex;
@@ -164,15 +159,17 @@ button:focus {
         align-items: center;
     }
 
-    .buttons{
-        width: 48%;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
 
     .mat-50{
         width: 68%;
         margin: 1%;
+    }
+
+    .btn{
+        
+        width: 100%;
+    }
+    button{
+        max-width: 48%;
     }
 }

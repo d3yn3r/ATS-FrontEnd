@@ -102,3 +102,95 @@ img{
     max-width: 130px;
     max-height: 130px;
 }
+
+@media (max-width:400px){
+
+    .profile-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .mat-50{
+        width: 98%;
+        margin:1%;
+    }
+    
+    .btn-cont{
+        width: 100%;
+    }
+
+    .buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-cancelar{
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .btn-editar{
+        width: 100%;
+    }
+
+    .btn-guardar{
+        width: 100%;
+    }
+    .btn-img{
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+
+    .profile-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .mat-50{
+        width: 98%;
+        margin:1%;
+    }
+    
+    .btn-cont{
+        width: 100%;
+    }
+
+    .buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-cancelar{
+        margin-top: 15px;
+        width: 60%;
+    }
+
+    .btn-editar{
+        width: 60%;
+    }
+
+    .btn-guardar{
+        width: 60%;
+    }
+    .btn-img{
+        margin-top: 15px;
+        width: 60%;
+    }
+}
